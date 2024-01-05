@@ -26,7 +26,7 @@ class FeedbackModal(discord.ui.Modal, title="Send us your feedback"):
   async def on_submit(self, interaction: discord.Interaction):
     channel = interaction.guild.get_channel(settings.FEEDBACK_CH)
     
-    embed = discord.Embed(title = "New Feedback",
+    embed = discord.Embed(title = self.fb_title.value,
                           description=self.message.value,
                           color= discord.Color.yellow())
     embed.set_author(name= self.user.name)
