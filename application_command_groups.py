@@ -10,6 +10,7 @@ def run():
   intents = discord.Intents.default()
   intents.message_content = True
   intents.members = True
+  #test
   
   bot = commands.Bot(command_prefix="~", intents=intents)
   
